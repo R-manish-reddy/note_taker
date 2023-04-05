@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Note taking app</title>
+    <style>
+      label{
+        margin: 5px 0;
+        display: block;
+      }
+      input{
+        border: 1px solid darkgray;
+        display: block;
+      }
+      #id_content{
+        height: 80px;
+        width: 100%;
+      }
+      #id_title{
+        width: 100%;
+      }
+      
+    </style>
+</head>
+<body>
+    <header h>
+        <nav
+          class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+          data-te-navbar-ref>
+          <div  class="flex w-full flex-wrap items-center justify-items-center px-6">
+            <a href="/"><h1 class="mb-6 text-2xl font-bold">Note taker</h1></a>
+            
+          </div>
+        </nav>
+      
+        
+      </header>
+    {% block content%}
+    {% endblock content%}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- box -->
+<br><br>
+<div class="mx-auto w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center justify-between mb-4">
+        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">{{note.title}}</h5>
+        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+            {{ date }}
+        </p>
+   </div>
+   <div class="flow-root">
+                        
+                        <p class="text-sm font-normal text-gray-900 truncate dark:text-white">
+                            {{note.content}}
+                        </p>  
+                        <br>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                            <a href="/notes/{{note.id}}/update/">Edit</a>
+                          </button> 
+                        <button class="bg-red-500  text-white font-bold py-1 px-4 rounded">
+                            <a href="/notes/{{note.id}}/delete/">Delete</a>
+                          </button> 
+   </div>
+</div>
+
+
+
+{% endblock content %}
